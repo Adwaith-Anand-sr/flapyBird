@@ -29,6 +29,11 @@ let gameOver = false
 let startTimer = 5
 let gameStarted = false
 
+let bgMusic = document.createElement('audio')
+bgMusic.src = 'midnight_cruiser.mp3'
+
+bgMusic.play()
+
 let topMap = [
   '|'    ,   '||'   ,   '|'    ,    '|||'  ,    '||'  , 
   '|||'  ,   ' '    ,   '|'    ,    '||'   ,    '|'   ,
@@ -193,6 +198,9 @@ window.addEventListener("load", ()=>{
       ) {
         gameSpeed = 0
         gameOver =true
+        setTimeout(function() {
+          bgMusic.pause()
+        }, 1500);
       }
     })
     
@@ -204,6 +212,7 @@ window.addEventListener("load", ()=>{
       bird.fallingSpeed = 0
       bird.speed = 0
       gameOver = true
+      bgMusic.pause()
       gameSpeed = 0
     }
     fps ++
