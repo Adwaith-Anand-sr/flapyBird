@@ -63,7 +63,7 @@ class Bird{
   }
   draw(){
     if (fps % 5 === 0) {
-      this.image.src = birdImageArray[this.spriteX]
+      this.image.src = birdImageArray[0]
       this.spriteX++
       if (this.spriteX > 13) {
         this.spriteX = 0
