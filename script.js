@@ -30,7 +30,7 @@ let startTimer = 5
 let gameStarted = false
 
 let bgMusic = document.createElement('audio')
-bgMusic.src = 'midnight_cruiser.mp3'
+bgMusic.src = 'blob/main/midnight_cruiser.mp3'
 
 bgMusic.play()
 
